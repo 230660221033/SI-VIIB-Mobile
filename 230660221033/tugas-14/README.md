@@ -20,3 +20,6 @@ Ringkasan Integrasi Alur & Data
 - Catatan Rilis Candidate Release
 - Skenario Uji Penerima (UAT)
 - Catatan Verifikasi Build
+
+## 4. Dokumentasi Hasil
+<img width="902" height="353" alt="hasil tugas 14" src="https://github.com/user-attachments/assets/6297aeec-200f-4684-b03f-41ac27163082" />
