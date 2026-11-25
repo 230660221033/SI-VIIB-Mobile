@@ -1,0 +1,5 @@
+# Refleksi Tugas 14 — Integrasi Project dan Candidate Release
+**Nama:** Yelly Ambarwaty  
+**NIM:** 230660221033  
+
+Menyatukan berbagai fitur yang sebelumnya terpisah menjadi satu alur terintegrasi menunjukkan betapa krusialnya penggunaan satu model data bersama (`PeminjamanBuku`) dan satu sumber kebenaran (`CeriaReadsRepository`) agar perubahan data langsung tersinkronisasi di seluruh halaman. Penerapan `LayoutBuilder` dan tema Material 3 berhasil mengatasi ketidakkonsistenan visual sekaligus memastikan tampilan tetap nyaman digunakan baik pada layar sempit 400 piksel maupun layar lebar 900 piksel. Untuk tahap rilis akhir berikutnya, aplikasi perlu dihubungkan dengan *backend* API produksi serta diuji secara langsung pada perangkat fisik Android guna memvalidasi performa dan izin perangkat keras secara menyeluruh.

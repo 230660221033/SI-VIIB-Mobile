@@ -1,0 +1,13 @@
+# Checklist Penyempurnaan UI/UX — CeriaReads (Tugas 14)
+**Nama:** Yelly Ambarwaty  
+**NIM:** 230660221033  
+
+| No. | Pemeriksaan | Sebelum | Sesudah | Bukti |
+|:---:|:------------|:--------|:--------|:------|
+| 1 | **Warna dan tipografi dari tema** | Kode warna hex dan ukuran font ditulis manual pada masing-masing widget. | Menggunakan `ThemeData` Material 3 dengan `ColorScheme.fromSeed` dan `Theme.of(context).textTheme`. | `lib/main.dart` pada `CeriaReadsCandidateReleaseApp` dan `_bangunBadgeStatus`. |
+| 2 | **Hierarki judul, informasi, dan aksi** | Informasi judul buku dan nama peminjam memiliki bobot huruf yang seragam. | Judul buku ditebalkan (`FontWeight.bold`), informasi pendukung memakai label sekunder, dan aksi utama ditempatkan pada `FloatingActionButton.extended` serta `FilledButton`. | Tampilan kartu daftar dan panel detail pada `lib/main.dart`. |
+| 3 | **Tata letak pada lebar 400 piksel** | Tampilan dua panel berdampingan menyebabkan teks terpotong (*overflow*) pada layar sempit. | Menggunakan `LayoutBuilder` (`constraints.maxWidth < 720`) untuk menyusun daftar dalam 1 kolom penuh dan membuka detail lewat *bottom sheet*. | Pengujian jendela Chrome lebar 400px tanpa peringatan *overflow*. |
+| 4 | **Tata letak pada lebar 900 piksel** | Daftar memanjang terlalu lebar di layar laptop/tablet sehingga menyisakan ruang kosong. | Pada lebar `>= 720px`, `LayoutBuilder` menampilkan tata letak 2 kolom (daftar 400px di kiri dan detail transaksi di kanan). | Pengujian jendela Chrome lebar 900px pada `HalamanUtamaTerintegrasi`. |
+| 5 | **Keadaan memuat, kosong, dan gagal** | Kondisi filter kosong belum menyediakan tombol pemulihan cepat. | Disediakan indikator `CircularProgressIndicator`, ilustrasi state kosong + tombol **Tampilkan Semua**, serta pesan error + tombol **Coba Lagi**. | Method `_bangunIsiUtama` dan `_bangunPanelDaftar` di `lib/main.dart`. |
+| 6 | **Target sentuh minimal 48 piksel** | Beberapa tombol aksi menggunakan tinggi bawaan yang terlalu rapat saat disentuh. | Seluruh tombol utama (`FilledButton`, `OutlinedButton`) diatur dengan `minimumSize: Size(..., 48)`. | Properti `style` pada tombol di `lib/main.dart`. |
+| 7 | **Label ikon dan kontras teks** | Ikon pada `AppBar` tidak memiliki keterangan *tooltip* untuk pembaca layar. | Menambahkan `tooltip` pada setiap `IconButton` dan memadukan warna teks `onPrimaryContainer`/`onErrorContainer` ber kontras tinggi. | Konfigurasi `AppBar` dan `_bangunBadgeStatus` di `lib/main.dart`. |
